@@ -1,0 +1,8 @@
+libdir=/clang64/lib
+includedir=/clang64/include
+
+Name: dlib
+Description: Numerical and networking C++ library
+Version: 19.24.2
+Libs: -L${libdir} -ldlib /clang64/lib/libgif.dll.a /clang64/lib/libsqlite3.dll.a
+Cflags: -I${includedir}  -I/clang64/include -I/clang64/include
