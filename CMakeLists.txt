@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 3.10.2)
 
 ##### PLUGIN NAME #####
-set(pluginname gipEmptyComponent)
+set(pluginname gipDlib)
 
 
 ##### PLUGIN PATHS #####
@@ -11,7 +11,7 @@ set(PLUGIN_LIBS_DIR ${PLUGIN_DIR}/libs)
 
 ##### PLUGIN SOURCES #####
 list(APPEND PLUGIN_SRCS
-			${PLUGIN_DIR}/src/gipEmptyComponent.cpp
+			${PLUGIN_DIR}/src/gipDlib.cpp
 )
 
 
@@ -44,6 +44,8 @@ endif(WIN32)
 if(WIN32)
 	list(APPEND PLUGIN_LINKLIBS
 				#Lib names
+				dlib
+				openblas
 	)
 elseif(LINUX)
 	list(APPEND PLUGIN_LINKLIBS
